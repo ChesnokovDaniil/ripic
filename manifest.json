@@ -1,0 +1,24 @@
+{
+    "action": {
+        "default_icon": { 
+        "128": "/images/get_started128.png",
+        "48": "/images/get_started48.png",
+        "32": "/images/get_started32.png",
+        "16": "/images/get_started16.png"
+        },
+        "default_popup": "highlighter.html"
+    },
+    "content_scripts": [
+        {
+            "js": ["/js/common.js"],
+            "matches": ["<all_urls>"]
+    }],       
+   "manifest_version": 3,
+   "name": "WebPainter",
+   "permissions": [ "activeTab","scripting" ],
+   "version": "1.0.0",
+   "web_accessible_resources": [ {
+       "matches": [ "*://*/*" ],
+       "resources": [ "assets/*.*", "collection/stickers/*.*", "collection/instr/*.*", "js/*.*", "libs/*.*" ]
+    }]
+}
